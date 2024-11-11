@@ -2,3 +2,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+    font-family: 'Amazon Ember';
+    src: url('../public/fonts/AmazonEmberDisplay_Lt.ttf') format('woff2'),
+         url('../public/fonts/AmazonEmber_He.ttf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amazon-Ember-Bold';
+    src: url('../public/fonts/AmazonEmberDisplay_Bd.ttf') format('woff2'),
+         url('../public/fonts/AmazonEmber_He.ttf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amazon-Ember-Medium';
+    src: url('../public/fonts/AmazonEmberDisplay_Md.ttf') format('woff2'),
+         url('../public/fonts/AmazonEmber_He.ttf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amazon-Ember-Light';
+    src: url('../public/fonts/AmazonEmberDisplay_Lt.ttf') format('woff2'),
+         url('../public/fonts/AmazonEmber_He.ttf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amazon-Ember-Light2';
+    src: url('../public/fonts/AmazonEmberDisplay_Rg.ttf') format('woff2'),
+         url('../public/fonts/AmazonEmber_He.ttf') format('woff'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    background-color: rgb(234, 237, 237);
+}
