@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
 import './App.css';
-import { Product } from './components/Product';
+import { Product } from './components/Product2';
 import Footer from './components/Footer';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';

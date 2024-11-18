@@ -25,8 +25,8 @@ export default function ProductCard({ title, images }) {
                     <Link 
                         key={index} 
                         to={`/product/${image.name}`}
-                        state={{ // Pass data as state to the Product page
-                            productId: image.name,  // Using image name as identifier
+                        state={{
+                            productId: image.name,
                             price: image.price,
                             rating: image.rating,
                             image: image.src,
