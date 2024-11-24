@@ -13,6 +13,7 @@ export const Product = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [isFallback, setIsFallback] = useState(false);
 
     const addToBasket = (product) => {
         dispatch({
@@ -38,6 +39,7 @@ export const Product = () => {
                     (product) => product.name.toLowerCase() === name.toLowerCase()
                 );
                 setProducts(fallbackProduct ? [fallbackProduct] : []); // Store fallback product or empty array
+                setIsFallback(true);
                 setLoading(false);
                 return;
             }
@@ -45,6 +47,7 @@ export const Product = () => {
             try {
                 setLoading(true);
                 setError(null); // Reset any previous errors
+                setIsFallback(false);
 
                 const headers = {
                     'x-rapidapi-key': import.meta.env.VITE_API_KEY,
@@ -74,6 +77,7 @@ export const Product = () => {
                     (product) => product.name.toLowerCase() === name.toLowerCase()
                 );
                 setProducts(fallbackProduct ? [fallbackProduct] : []); // Store fallback product or empty array
+                setIsFallback(true);
             } finally {
                 setLoading(false);
             }
@@ -88,17 +92,6 @@ export const Product = () => {
             <div className="min-h-screen flex flex-col justify-between">
                 <div className="flex-grow flex justify-center items-center">
                     <h2 className="text-xl text-gray-700">Loading...</h2>
-                </div>
-            </div>
-        );
-    }
-
-    // If there is an error (e.g., no products found), show an error message
-    if (error) {
-        return (
-            <div className="min-h-screen flex flex-col justify-between">
-                <div className="flex-grow flex justify-center items-center">
-                    <h2 className="text-xl text-gray-700">{error}</h2>
                 </div>
             </div>
         );
@@ -141,6 +134,11 @@ export const Product = () => {
                         >
                             Add to Cart
                         </button>
+                        {isFallback && (
+                            <div className="text-xs mt-2 text-red-600">
+                                Due to API error, the product list is not visible!
+                            </div>
+                        )}
                     </div>
 
                 ))

@@ -72,16 +72,18 @@ function Header() {
                         <div className="font-bold text-sm">with order</div>
                     </div>
 
-                    <div className="relative">
-                        <IconButton>
-                            <ShoppingCartIcon className="text-white" fontSize="large" />
-                        </IconButton>
-                        {basketCount > 0 && (
-                            <span className="absolute top-0 right-0 bg-orange-400 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
-                                {basketCount}
-                            </span>
-                        )}
-                    </div>
+                    <Link to="/cart">
+                        <div className="relative">
+                            <IconButton>
+                                <ShoppingCartIcon className="text-white" fontSize="large" />
+                            </IconButton>
+                            {basketCount > 0 && (
+                                <span className="absolute top-0 right-0 bg-orange-400 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center">
+                                    {basketCount}
+                                </span>
+                            )}
+                        </div>
+                    </Link>
                 </nav>
             </header>
         </div>
