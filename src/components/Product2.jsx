@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useStateValue } from "./StateProvider";
 import { homeEssentialsImages, gamingImages, fashionImages, kitchenImages } from "../assets/ImageData";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "https://real-time-amazon-data.p.rapidapi.com/search";
 
 export const Product = () => {
     const { name } = useParams();
@@ -50,8 +50,8 @@ export const Product = () => {
                 setIsFallback(false);
 
                 const headers = {
-                    'x-rapidapi-key': import.meta.env.VITE_API_KEY,
-                    'x-rapidapi-host': import.meta.env.VITE_API_HOST
+                    'x-rapidapi-key': "b9166633cdmshceba72a0b61f461p1500c6jsndd599ae6b431",
+                    'x-rapidapi-host': "real-time-amazon-data.p.rapidapi.com"
                 };
 
                 // Make the API call with headers
