@@ -20,7 +20,7 @@ const Footer = () => {
                     <h2 className="font-amazonEmberLight2 text-xl mb-2">Connect With Me</h2>
                     <div className="flex space-x-4">
                         <a href="https://www.linkedin.com/in/iamrupambiswas" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500">LinkedIn</a>
-                        <a href="https://twitter.com/iamrupambiswas" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Twitter</a>
+                        <a href="https://twitter.com/iam_rupambiswas" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Twitter</a>
                         <a href="https://github.com/iamrupambiswas" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">GitHub</a>
                     </div>
                 </div>
